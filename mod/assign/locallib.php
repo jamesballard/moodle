@@ -1053,7 +1053,7 @@ class assign {
                     $displaygrade = format_float($grade, 2);
                 }
                 $o .= '<label class="accesshide" for="quickgrade_' . $userid . '">' . get_string('usergrade', 'assign') . '</label>';
-                $o .= '<input type="text" id="quickgrade_' . $userid . '" name="quickgrade_' . $userid . '" value="' .
+                $o .= '<input type="number" step="any" id="quickgrade_' . $userid . '" name="quickgrade_' . $userid . '" value="' .
                       $displaygrade . '" size="6" maxlength="10" class="quickgrade"/>';
                 $o .= '&nbsp;/&nbsp;' . format_float($this->get_instance()->grade,2);
                 $o .= '<input type="hidden" name="grademodified_' . $userid . '" value="' . $modified . '"/>';
